@@ -1,0 +1,274 @@
+/* CONTENTS
+/////////////////////////////////////
+*/
+// 00. LESS
+/*
+01. BASE
+02. LAYOUT
+03. MODULES
+04. STATE
+
+This stylesheet is a starting place. Include your own Base, Layout
+Modules, and State styles below.
+
+This style sheet organization is based on the SMACCS system. 
+Please visit the following website for more info: http://smacss.com/
+*/
+
+// Load LESS Library 
+@import "components/_variables";
+
+/****************************
+/////////////////////////////
+
+01. BASE
+
+All base HTML tags that require styling
+
+/////////////////////////////
+****************************/
+
+body {
+  background: @primary-background;
+  font-family: @body-copy;
+  font-size: @base-font-size;
+  line-height: @base-line-height;
+  color: @primary-text; 
+}
+
+ul,
+ol {
+
+}
+
+li {
+
+}
+
+a, a:link, a:visited {
+	color: @red1;
+}
+
+a:hover {
+
+}
+
+p {
+
+
+}
+
+hr {
+
+}
+
+/***************************
+////////////////////////////
+
+02. LAYOUT
+
+Styles specific to your layout or website
+
+////////////////////////////
+***************************/
+.header .container {
+	background: @primary-background;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.header {
+	padding: (@padding * 4) 0;
+}
+
+.footer {
+	text-align: center;
+	color: @inverse-text;
+	padding-bottom: (@padding * 4);
+}
+
+.footer .container {
+	background: @inverse-background;
+	padding: (@padding * 4) 0;
+}
+
+// add padding around social media links
+.social-media {
+	padding: @padding 0;
+}
+
+.social-medial a {
+	padding: 0 (@padding - 0.5);
+	color: @white;
+}
+
+// hover link color for social media icons
+.social-media a:hover {
+	color: @grey;
+}
+
+.about-social-media {
+	margin: (@margin * 2) 0;
+	font-size: (@font-size * 2);
+}
+
+.public-banner .col-lg-12 {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.public-banner img {
+	width: 100%;
+	height: auto;
+}
+
+.main-nav {
+	line-height: 36px; // vertical center with logo
+}
+
+.main-nav ul {
+	margin-bottom: 0;
+}
+
+.main-nav li.divider {
+	color: @grey;
+}
+
+.main-nav a {
+	text-decoration: none;
+}
+
+.main-nav a:hover {
+	border-bottom: (@border-size * 5) @border-type @grey;
+	transition: border-color 0.7s ease;
+}
+
+.home-about {
+	padding: (@padding * 4) 0 (@padding * 6) 0;
+}
+
+.home-food {
+	text-align: center;
+}
+
+.home-food img {
+	padding-bottom: @padding;
+}
+
+// add review padding consistent with about
+.reviews {
+	padding: (@padding * 4) 0 (@padding * 6) 0;
+}
+
+.page-body {
+	padding: (@padding * 4);
+}
+
+/***************************
+////////////////////////////
+
+03. MODULES
+
+Reusable classes or components
+
+////////////////////////////
+***************************/
+
+@import "components/_colors";
+@import "components/_typography";
+@import "components/_carousel";
+
+/*
+
+Potential modules you could replace...
+
+badges
+
+breadcrumb
+
+buttons
+
+button groups
+
+button dropdowns 
+
+carousel
+
+code 
+
+collapse
+
+colors
+
+dropdown
+
+forms
+
+icons
+
+input groups 
+
+images
+
+helpers
+
+jumbotron
+
+labels
+
+list group
+
+media object
+
+modal
+
+navs
+
+navbar
+
+pager
+
+page header
+
+pagination
+
+panels
+
+pills
+
+popover
+
+progress bars
+
+scrollspy
+
+tables
+
+tabs
+
+thumbnails
+
+tooltip
+
+typography
+
+well
+
+
+/***************************
+////////////////////////////
+
+04. STATES
+
+////////////////////////////
+***************************/
+
+/* 
+
+Potential states you could replace...
+
+alerts
+
+form validation
+
+*/
